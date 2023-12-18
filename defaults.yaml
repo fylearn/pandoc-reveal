@@ -1,0 +1,28 @@
+## Requires Pandoc version >=2.8
+## Usages pandoc -d defaults.yaml -o outputfile inputfile.md
+
+from: markdown+emoji+fenced_divs
+# reader: may be used instead of from:
+to: revealjs
+# writer: may be used instead of to:
+
+standalone: true
+self-contained: false
+
+html-math-method:
+  method: mathjax
+  url: "https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"
+
+css: custom.css
+
+incremental: false
+
+highlight-style: haddock
+
+variables:
+  slideNumber: true
+  mouseWheel: true
+  width: 1600
+  height: 900
+  maxScale: 1.5
+  navigationMode: linear
