@@ -1,0 +1,26 @@
+name: Build and Deploy Slides Using Pandoc
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Convert Markdown to HTML
+        run: |
+          docker run --rm \
+            --volume "$(pwd):/data" \
+            --user $(id -u):$(id -g) \
+            pandoc/extra -d defaults.yaml -i index.md -o index.html 
+
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: .
+          force_orphan: true # Ensures that not all previous PDFs are kept around forever

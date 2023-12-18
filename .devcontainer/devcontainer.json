@@ -1,0 +1,9 @@
+{
+  "name": "Markdown to Reveal.js Slides",
+  "image": "pandoc/extra",
+  "extensions": [
+    "shd101wyy.markdown-preview-enhanced",   
+    "ritwickdey.liveserver",
+    "chrischinchilla.vscode-pandoc"
+  ],
+}

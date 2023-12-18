@@ -1,0 +1,57 @@
+section > h2 {
+  top: 0 !important; /* Positions the top edge of h2 elements directly inside a section at the top of the containing element. The !important rule overrides any other conflicting rules. */
+  margin-left: auto !important; /* Centers the h2 elements horizontally within their containing element. The !important rule overrides any other conflicting rules. */
+  margin-right: auto !important; /* Centers the h2 elements horizontally within their containing element. The !important rule overrides any other conflicting rules. */
+  margin-bottom: 10px; /* Adds a 10px margin below the h2 elements. */
+  left: 0 !important; /* Positions the left edge of h2 elements directly inside a section at the left edge of the containing element. The !important rule overrides any other conflicting rules. */
+  right: 0 !important; /* Positions the right edge of h2 elements directly inside a section at the right edge of the containing element. The !important rule overrides any other conflicting rules. */
+  text-align: center !important; /* Centers the text within the h2 elements. The !important rule overrides any other conflicting rules. */
+}
+
+section.slide {
+  text-align: left !important; /* Aligns the text to the left within section elements with a class of slide. The !important rule overrides any other conflicting rules. */
+}
+
+.row {
+  display: flex; /* Makes the element with class .row a flex container. */
+  flex-direction: row; /* Makes the direct children of .row line up horizontally. */
+  flex-wrap: wrap; /* Allows the items to wrap as needed with this property. */
+  width: 100%; /* Makes the .row take up the full width of its parent. */
+  justify-content: space-around; /* Distributes space around items evenly such that the spacing between any two items and the space to the edges is equal. */
+}
+
+.column {
+  margin: 10px; /* Adds a 10px margin around elements with class .column. */
+  display: flex; /* Makes the element with class .column a flex container. */
+  flex-direction: column; /* Makes the direct children of .column line up vertically. */
+  flex-basis: 100%; /* Specifies the initial main size of the flex item, before any available space is distributed according to the flex factors. */
+  flex: 1; /* Allows the item to grow and shrink. Value is the proportion of the free space in the container that should be allocated to the item. */
+}
+
+.double-column {
+  display: flex; /* Makes the element with class .double-column a flex container. */
+  flex-direction: column; /* Makes the direct children of .double-column line up vertically. */
+  flex-basis: 100%; /* Specifies the initial main size of the flex item, before any available space is distributed according to the flex factors. */
+  flex: 1.5; /* Allows the item to grow and shrink. Value is the proportion of the free space in the container that should be allocated to the item. */
+}
+
+a:link {
+  color: rgb(75, 35, 219); /* Changes the color of unvisited links to a specific RGB color. */
+}
+
+a:visited {
+  color: #0990e4; /* Changes the color of visited links to a specific hexadecimal color. */
+}
+
+a:hover {
+  color: #d9e61c; /* Changes the color of links when the mouse pointer is over them to a specific hexadecimal color. */
+}
+
+a:active {
+  color: #940404; /* Changes the color of selected (clicked but not yet released) links to a specific hexadecimal color. */
+}
+
+.center-h {
+  display: flex; /* Makes the element with class .center-h a flex container. */
+  justify-content: center; /* Centers the direct children of .center-h horizontally within the .center-h element. */
+}
